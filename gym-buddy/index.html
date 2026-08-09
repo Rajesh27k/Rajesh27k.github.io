@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Rajesh Gym Buddy</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">LEAN BY NOVEMBER</p>
+      <h1>Gym Buddy</h1>
+      <p class="sub">5-day beginner plan • form videos • workout tracking</p>
+    </div>
+    <button id="resetBtn" class="ghost">Reset</button>
+  </header>
+
+  <main>
+    <section class="card stats">
+      <div><span class="stat-label">Start</span><strong>92 kg</strong></div>
+      <div><span class="stat-label">Current</span><strong>86.2 kg</strong></div>
+      <div><span class="stat-label">Target</span><strong>75 kg</strong></div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">TODAY</p>
+          <h2 id="todayTitle">Workout</h2>
+        </div>
+        <div id="progressRing" class="progress-ring">0%</div>
+      </div>
+      <div id="todayWorkout"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">WEEKLY PLAN</p>
+          <h2>Choose a day</h2>
+        </div>
+      </div>
+      <div id="dayTabs" class="day-tabs"></div>
+      <div id="workoutList"></div>
+    </section>
+
+    <section class="card">
+      <p class="eyebrow">PROGRESS</p>
+      <h2>Body weight</h2>
+      <div class="weight-form">
+        <input id="weightInput" type="number" step="0.1" placeholder="e.g. 85.8" inputmode="decimal" />
+        <button id="saveWeightBtn">Save</button>
+      </div>
+      <div id="weightHistory" class="history"></div>
+    </section>
+
+    <section class="card tips">
+      <p class="eyebrow">BEGINNER RULES</p>
+      <h2>Train smart</h2>
+      <ul>
+        <li>Use a weight you can control for every rep.</li>
+        <li>Finish most sets with about 2–3 clean reps still possible.</li>
+        <li>For single-arm work, start with your left arm and match its reps on the right.</li>
+        <li>Do not chase soreness or failure. Chase clean, repeatable technique.</li>
+        <li>Belly and love-handle fat reduces through overall fat loss—not spot reduction.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
